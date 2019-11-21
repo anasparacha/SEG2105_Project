@@ -1,5 +1,6 @@
 package com.example.seg2105_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -31,6 +33,8 @@ public class Welcome extends AppCompatActivity {
     private FirebaseUser mUser;
     private DatabaseReference mDatabase;
     private TextView msg;
+    private Button serv;
+    private Button empPage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +78,28 @@ public class Welcome extends AppCompatActivity {
                 }
             });
         }
+        serv= (Button) findViewById(R.id.servBtn);
+        serv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openService();
+            }
+        });
+        empPage= (Button) findViewById(R.id.empBtn);
+        empPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEmployee();
+            }
+        });
+    }
+    public void openService(){
+        Intent intent= new Intent(this, services.class);
+        startActivity(intent);
+    }
+    public void openEmployee(){
+        Intent intent = new Intent(this, EmpPage.class);
+        startActivity(intent);
     }
 
 }

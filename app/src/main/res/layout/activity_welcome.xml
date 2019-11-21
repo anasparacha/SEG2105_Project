@@ -34,5 +34,17 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
+        <Button
+            android:id="@+id/servBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Services" />
+
+        <Button
+            android:id="@+id/empBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Employee Page" />
+
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 openLoginAdm();
             }
         });
-        emp= (Button) findViewById(R.id.emp);
+        emp= (Button) findViewById(R.id.empBtn);
         emp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
