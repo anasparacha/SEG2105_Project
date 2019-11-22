@@ -1,14 +1,16 @@
 package com.example.seg2105_project.data;
 
+import java.util.List;
+
 public class EmployeeProfile {
     private String clinicName;
     private String clinicAddress;
-    private int number;
+    private String number;
     private String insuranceType;
-    private String [] payment;
-    private String [] services;
+    private String payment;
+    private List<Service> services;
 
-    public EmployeeProfile(String name, String address, int number, String insurance, String [] pay, String [] services){
+    public EmployeeProfile(String name, String address, String number, String insurance, String pay, List<Service> services){
         clinicName=name;
         clinicAddress=address;
         this.number=number;
@@ -16,18 +18,24 @@ public class EmployeeProfile {
         payment=pay;
         this.services=services;
     }
+    public EmployeeProfile(String name, String address, String number){
+        clinicName=name;
+        clinicAddress=address;
+        this.number=number;
+    }
+
     public String getClinicName(){return clinicName;}
     public String getClinicAddress(){return clinicAddress;}
-    public int getNumber(){return number;}
+    public String getNumber(){return number;}
     public String getInsuranceType(){return insuranceType;}
-    public String [] getPayment(){return payment;}
-    public String [] getServices(){return services;}
+    public String getPayment(){return payment;}
+    public List<Service> getServices(){return services;}
 
     public void setClinicName(String name){clinicName=name;}
     public void setClinicAddress(String address){clinicAddress=address;}
-    public void setNumber(int number){this.number=number;}
+    public void setNumber(String number){this.number=number;}
     public void setInsuranceType(String insurance){insuranceType=insurance;}
-    public void setPayment(String [] pay){payment=pay;}
-    public void setServices(String [] services){this.services=services;}
+    public void setPayment(String pay){payment=pay;}
+    public void setServices(List<Service> services){this.services=services;}
 
 }
